@@ -8,26 +8,37 @@
     <title>CodeHub</title>
 </head>
 <body class="min-h-screen bg-slate-100 dark:bg-black dark:text-white">
-    <header class="bg-teal-700 text-white sticky top-0 z-10">
+    <header class="bg-teal-700 text-white sticky top-0 z-10" >
         <section class="max-w-3xl mx-auto p-4 flex justify-between items-center">
             <h1 class="text-4xl font-medium">
-                🐱‍💻 CodeHub
+                <a href="#head"> 🐱‍💻 CodeHub </a>
             </h1>
             <div class="button text-3xl sm:hidden focus:outline-none" id="dropdown-button">
                 &#9776
             </div>
             <nav class="hidden sm:block text-xl space-x-8" aria-label="main">
-                <a href="#products" class="hover:opacity-90">Learning</a>
+                <a href="#learning" class="hover:opacity-90">Learning</a>
                 <a href="#contact" class="hover:opacity-90">Contact Us</a>
                 <a href="#login" class="hover:opacity-90">Login</a>
             </nav>
         </section>
     </header>
     <main class="max-w-6xl mx-auto">
-        <section id="first-content" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12">
-            <article class="sm:w-3/4 sm:ml-6">
-                <q class="max-w-md text-3xl font-bold text-center sm:text-4xl sm:text-left dark:text-white text-slate-900">Any fool can write code that a computer can understand. Good programmers write code that humans can understand.</q>
-                <p class="max-w-md text-2xl mt-4 text-center sm:text-left text-slate-700 dark:text-slate-400">
+        <section id="head" class="flex flex-col-reverse justify-center sm:flex-row p-6 items-center gap-8 mb-12 scroll-m-24">
+            <article class="sm:w-3/4 sm:ml-6 relative">
+                <blockquote class="max-w-full 
+                text-3xl font-bold 
+                text-center sm:text-4xl 
+                sm:text-left p-12 
+                dark:text-white text-slate-900 
+                before:content-['\201C'] 
+                before:absolute before:top-0 
+                before:left-0 before:text-8xl sm:before:text-9xl
+                before:text-white 
+                after:content-['\201D'] after:absolute after:bottom-0 after:right-1 after:text-8xl sm:after:text-9xl after:text-white">
+                    Any fool can write code that a computer can understand. Good programmers write code that humans can understand.
+                </blockquote>
+                <p class="max-w-md text-2xl mt-4 pl-12 text-center sm:text-left text-slate-700 dark:text-slate-400">
                     -Martin Fowler
                 </p>
             </article>
@@ -36,14 +47,14 @@
 
         <hr class="mx-auto w-1/2 bg-black dark:bg-white">
 
-        <section class="section p-6 my-12" id="learning">
+        <section class="section p-6 my-12 scroll-mt-20" id="learning">
             <h2 class="text-4xl text-center font-bold mb-6 text-slate-900 dark:text-white">
                 Learning
             </h2>
             <ul class="list-none mx-auto my-12 flex flex-col sm:flex-row items-center justify-center gap-8">
-                <li class="w-1/2 sm:5/6 flex flex-col items-center bg-white dark:bg-black border border-solid border-slate-900 dark:border-gray-100 py-4 rounded-3xl shadow-xl">
+                <li class="w-1/2 sm:5/6 flex flex-col items-center bg-white dark:bg-black border border-solid border-slate-900 dark:border-gray-100 py-4 rounded-3xl shadow-xl min-w-min">
                     <img src="img/c.png" alt="C programming" class="w-1/4 mb-6">
-                    <h3 class="text-3xl text-center text-slate-900 dark:text-white">C Programming</h3>
+                    <h3 class="text-3xl text-center text-slate-900 dark:text-white">C language</h3>
                     <p class="hidden sm:block text-xl text-center m-3 text-slate-500 dark:text-slate-400">
                         C is a general-purpose computer programming language.
                     </p>
@@ -75,19 +86,45 @@
 
         <hr class="mx-auto w-1/2 bg-black dark:bg-white">
 
-        <section class="section p-6 my-12" id="learning">
+        <section class="section p-6 my-12 scroll-mt-20" id="contact">
             <h2 class="text-4xl text-center font-bold mb-6 text-slate-900 dark:text-white">
                 Contact us
             </h2>
+            <form action="" class="max-w-4xl mx-auto text-2xl sm:text-3xl flex flex-col gap-4">
+                <label for="subject">Subject:</label>
+                <input type="text" name="subject" id="subject" class="w-full text-black text-2xl sm:text-3xl p-2 rounded-xl border border-solid border-slate-900 dark:border-none" minlength="3" maxlength="60" placeholder="Your subject" required>
+                <label for="message">Message:</label>
+                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message" class="w-full text-black p-3 text-2xl sm:text-3xl rounded-xl border border-slate-900 dark:border-none" required></textarea>
+                <button class="bg-teal-700 hover:bg-teal-600 active:bg-teal-500 p-3 w-48 rounded-xl border border-solid border-slate-900 dark:border-none">Submit</button>
+            </form>
         </section>
 
         <hr class="mx-auto w-1/2 bg-black dark:bg-white">
 
-        <section class="section p-6 my-12" id="learning">
+        <section class="section p-6 my-12 scroll-mt-20" id="login">
             <h2 class="text-4xl text-center font-bold mb-6 text-slate-900 dark:text-white">
                 Login
             </h2>
         </section>
     </main>
+
+    <footer id="footer" class="bg-teal-700 text-white text-xl">
+        <section class="max-w-4xl mx-auto p-4 flex flex-col sm:flex-row sm:justify-between">
+            <address>
+                <h2>CodeHub Team</h2>
+                Email: <a href="mailto:chamoddananjaya49@gmail.com">Inquiries@gmail.com</a> <br>
+                Phone: <a href="tel:+94780000000">078 xxx xxxx</a>
+            </address>
+            <nav class="hidden md:flex flex-col gap-2" aria-label="footer">
+                <a href="#learning" class="hover:opacity-90">Learning</a>
+                <a href="#contact" class="hover:opacity-90">Contact Us</a>
+                <a href="#login" class="hover:opacity-90">Login</a>
+            </nav>
+            <div class="flex flex-col sm:gap-2">
+                <p class="text-right">Copyright &copy; <span id="year">2022</span></p>
+                <p class="text-right">All Right Reserved</p>
+            </div>
+        </section>
+    </footer>
 </body>
 </html>
